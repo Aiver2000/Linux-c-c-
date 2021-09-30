@@ -1,10 +1,6 @@
-#include <stdio.h>
-int main()
-{
 
-  printf("hello vim\n");
-
-
-
-  return 0;
-}
+");
+printf("ssssssssss");
+0ljkkhjhlsssssssss");
+ssssss("ssssssssss");
+printf("ssssssssss");
