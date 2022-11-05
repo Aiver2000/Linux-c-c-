@@ -1,7 +1,8 @@
 mytest:mytest.c
-	gcc -O3 -o $@ $^
+	gcc -o $@ $^
 .PHONY:clean
 clean:
-	rm mytest
+	rm -f mytest
+
 
 

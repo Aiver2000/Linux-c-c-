@@ -8,6 +8,6 @@ server:server.c
 
 .PHONY:clean
 clean:
-	rm client server myfifo
+	rm client server -f 
 
 

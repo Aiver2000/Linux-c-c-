@@ -1,22 +1,25 @@
 #include <stdio.h>
-#define M 100
-//#define OS 0  //0 -》win  1-》centos
-int main()
+#include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <signal.h>
+
+int count = 0;
+void handler(int signo)
 {
-#if OS 
-  printf("hello centos!\n");
+  alarm(1);
+  printf("count:%d\n",count);
 
-#else
-  printf("hello windows\n");
-#endif 
-  //printf("hello Linxu !\n");
-  //printf("hello %d\n",M);
-  //printf("hello Linxu !\n");
-  //printf("hello Linxu !\n");
-  //printf("hello Linxu !\n");
-  //printf("hello Linxu !\n");
-  //printf("hello Linxu !\n");
-  
+}
 
-  return 0;
+int main ()
+{
+    signal(SIGALRM,handler);
+
+    alarm(1);
+
+    while(1)
+    {
+      count++;
+    }
 }
